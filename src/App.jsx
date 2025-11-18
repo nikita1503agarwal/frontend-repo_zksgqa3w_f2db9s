@@ -1,18 +1,11 @@
 import { useMemo, useState } from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import AnimatedHero from "./components/AnimatedHero";
 import SearchFood from "./components/SearchFood";
 import WorkoutPlanner from "./components/WorkoutPlanner";
+import AnimatedCounters from "./components/AnimatedCounters";
+import AnimatedListItem from "./components/AnimatedListItem";
 import { Flame } from "lucide-react";
-
-function Stat({ label, value, accent = "emerald" }) {
-  return (
-    <div className="bg-slate-800/60 border border-white/10 rounded-2xl p-4">
-      <div className="text-slate-400 text-sm">{label}</div>
-      <div className={`mt-1 text-2xl font-bold text-${accent}-300`}>{value}</div>
-    </div>
-  );
-}
 
 function App() {
   const [active, setActive] = useState("dashboard");
@@ -44,18 +37,20 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-slate-950 text-white relative">
       <Navbar active={active} setActive={setActive} />
 
-      <Hero />
+      <AnimatedHero />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <Stat label="Calorie di oggi" value={`${totals.calories} kcal`} />
-          <Stat label="Proteine" value={`${totals.protein} g`} />
-          <Stat label="Carboidrati" value={`${totals.carbs} g`} />
-          <Stat label="Grassi" value={`${totals.fat} g`} />
-        </div>
+        <AnimatedCounters
+          items=[
+            { label: "Calorie di oggi", value: `${totals.calories} kcal` },
+            { label: "Proteine", value: `${totals.protein} g` },
+            { label: "Carboidrati", value: `${totals.carbs} g` },
+            { label: "Grassi", value: `${totals.fat} g` },
+          ]
+        />
       </section>
 
       <SearchFood onAdd={addFood} />
@@ -70,11 +65,11 @@ function App() {
           ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {diary.map((i, idx) => (
-                <div key={idx} className="bg-slate-900/60 border border-white/10 rounded-xl p-4">
+                <AnimatedListItem key={idx} delay={idx * 0.04} className="bg-slate-900/60 border border-white/10 rounded-xl p-4">
                   <div className="text-white font-semibold">{i.food_name}</div>
                   <div className="text-sm text-slate-400">{Math.round(i.calories)} kcal</div>
                   <div className="mt-2 text-xs text-slate-400">P {i.protein_g}g • C {i.carbohydrates_total_g}g • G {i.fat_total_g}g</div>
-                </div>
+                </AnimatedListItem>
               ))}
             </div>
           )}
