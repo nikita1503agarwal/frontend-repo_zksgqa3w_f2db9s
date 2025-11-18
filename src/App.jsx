@@ -44,12 +44,12 @@ function App() {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
         <AnimatedCounters
-          items=[
+          items={[
             { label: "Calorie di oggi", value: `${totals.calories} kcal` },
             { label: "Proteine", value: `${totals.protein} g` },
             { label: "Carboidrati", value: `${totals.carbs} g` },
             { label: "Grassi", value: `${totals.fat} g` },
-          ]
+          ]}
         />
       </section>
 

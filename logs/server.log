@@ -3,55 +3,9 @@
 > vite
 
 
-  VITE v5.4.20  ready in 258 ms
+  VITE v5.4.20  ready in 296 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.2.22:3000/
-3:10:10 PM [vite] Pre-transform error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:47:16: ERROR: Expected "{" but found "["
-3:10:11 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:47:16: ERROR: Expected "{" but found "["
-  Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx:47:16
-  
-  Expected "{" but found "["
-  45 |        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-  46 |          <AnimatedCounters
-  47 |            items=[
-     |                  ^
-  48 |              { label: "Calorie di oggi", value: `${totals.calories} kcal` },
-  49 |              { label: "Proteine", value: `${totals.protein} g` },
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-3:10:30 PM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:47:16: ERROR: Expected "{" but found "["
-  Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx:47:16
-  
-  Expected "{" but found "["
-  45 |        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
-  46 |          <AnimatedCounters
-  47 |            items=[
-     |                  ^
-  48 |              { label: "Calorie di oggi", value: `${totals.calories} kcal` },
-  49 |              { label: "Proteine", value: `${totals.protein} g` },
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+3:12:00 PM [vite] ✨ new dependencies optimized: framer-motion
+3:12:00 PM [vite] ✨ optimized dependencies changed. reloading
